@@ -1,7 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import {db} from './firebase'
+
+import { collection, addDoc } from "firebase/firestore";
+
 
 function App() {
+  const testWrite = async () => {
+    try {
+      const docRef = await addDoc(collection(db, "test"), {
+        first: "Ada",
+        last: "Lovelace",
+        born: 1815
+      });
+      console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -9,14 +26,12 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
+        <button
           className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          onClick={() => testWrite()}
         >
-          Learn React
-        </a>
+          TEST
+        </button>
       </header>
     </div>
   );
