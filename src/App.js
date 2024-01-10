@@ -1,15 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import TestPage from './components/Test/Test'
 import TestPage2 from './components/Test2/Test2'
 
-
-
 function App() {
   
-
   return (
     <Router>
       <Routes>
