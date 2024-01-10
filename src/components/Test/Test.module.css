@@ -1,0 +1,16 @@
+/* using the .module extender you can use generic classnames as they only affect the page where they are used*/
+
+.container {
+    margin: none;
+    height: 100vh;
+    width: 100vw;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+}
+
+.center-screen {
+}
+
