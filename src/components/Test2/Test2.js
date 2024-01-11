@@ -5,7 +5,7 @@ function TestPage2() {
         <>
             <div>
                 <h1>
-                    hi World
+                    Hi World
                 </h1>
             </div>
         </>
